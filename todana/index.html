@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChillDulu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    .floating {
+      animation: naikTurun 3s ease-in-out infinite;
+    }
+
+    .cart-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    @keyframes naikTurun {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+        /* naik */
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .underline-hover {
+      display: inline-block;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .underline-hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+    }
+
+    .btn-close {
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+      /* Warna yang kamu inginkan */
+    }
+
+    /* Efek animasi gerak garis dari kiri ke kanan */
+    .underline-hover:hover::after {
+      animation: moveLine 0.5s ease-out forwards;
+    }
+
+    @keyframes moveLine {
+      0% {
+        left: 0;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+
+      100% {
+        left: 0;
+        width: 100%;
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <!-- Navbar -->
+  <nav class="d-md-flex fixed-top bg-white p-4">
+    <div>
+      <h1 style="color: black;">ChillDulu</h1>
+    </div>
+    <div class="ms-auto my-auto">
+      <ul class="list-inline m-0">
+        <li class="list-inline-item mx-md-3"><a href="" class="text-decoration-none  fw-bold"
+            style="color: black;">Produk
+          </a>
+        </li>
+        <li class="list-inline-item mx-md-3"><a href="" class="text-decoration-none  fw-bold"
+            style="color: black;">Tentang
+            Kami</a></li>
+        <li class="list-inline-item mx-md-3"><a href="" class="text-decoration-none  fw-bold" style="color: black;">Cara
+            Order</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Banner -->
+  <div class="px-4 mb-4">
+    <img src="images/banner.png" alt="" class="w-100 mt-5 p-0 rounded">
+  </div><br><br><br>
+  <!-- continer -->
+  <div class="container p-0 mb-4 mt-4 bg-white">
+    <!-- Catalog -->
+    <h3 class="text-center text-dark">Kata-Kata Hari Ini?</h3>
+    <div class="text-center w-50 mx-auto text-dark ">"Capek jadi waras terus? Udah lah, buka bir, duduk selonjor, nakal
+      dikit buat hiburan. Hidup serius mulu bisa kering, bro. Santai aja... besok masih bisa tobat, yang penting malam
+      ini kita nikmatin dulu." 😈🍻
+
+    </div>
+
+    <section class="Tentang px-4 py-4">
+      <div class="row align-items-center" data-aos="fade-up">
+        <!-- Kolom Teks (Kiri) -->
+        <div class="col-md-6 order-1 order-md-0" data-aos="fade-right" data-aos-delay="250">
+          <p class="text-start">
+            Di balik setiap botol bir yang dingin dan menggoda, ada cerita soal selera, kebebasan, dan waktu santai yang
+            gak bisa dibeli di tempat lain. Toko kami lahir dari obrolan tengah malam dan hasrat buat bikin pengalaman
+            minum bir jadi lebih dari sekadar rutinitas. Kami nggak cuma jual bir kami hadir buat lo yang ngerti
+            rasanya ngaso setelah hari panjang, atau sekadar butuh temen ngobrol tanpa banyak basa-basi.
+
+            Koleksi kami dipilih dengan teliti: dari yang klasik dan familiar, sampai yang punya rasa unik dan karakter
+            kuat. Mau lo pecinta bir lokal atau penasaran sama rasa luar negeri, semuanya ada di sini. Kami percaya,
+            setiap orang punya gaya nikmatin bir yang beda dan tugas kami cuma satu: nyediain pilihan terbaik biar lo
+            tinggal buka, teguk, dan ngerasain sendiri kenapa bir emang nggak pernah salah jadi pelarian.
+          </p>
+        </div>
+
+        <!-- Kolom Gambar (Kanan) -->
+        <div class="col-md-6 text-center order-0 order-md-1">
+          <img src="images/profil.png" width="100%" alt="Foto Profil" class="img-fluid floating">
+        </div>
+      </div>
+    </section>
+    <hr>
+    <!-- produk -->
+
+
+
+
+    <div class="row row-cols-md-3 row-cols-1 gx-5 p-5">
+      <div class="col mb-5">
+        <div class="product-card card border-0 bg-white" data-aos="fade-up" data-aos-delay="150">
+          <img src="images/1.jpg" class="card-img-top rounded" alt="...">
+          <div class="card-body">
+            <p class="card-text text-dark fw-bold">Anggur Merah Cap Orang Tua 650ML</p>
+            <p class="card-text text-dark fw-light">Segar,beraroma, hangat, & elegan.</p>
+          </div>
+          <div class="d-md-flex row row-cols-1 row-cols-2 ">
+            <span class=" text-success  fw-bold d-block p-2 harga text-start ">70,000,00</span>
+            <a class=" ms-auto btn  text-dark fw-bold d-block btnDetail underline-hover add-to-cart"
+              data-name="Anggur Merah Cap Orang Tua 650ML" data-price="70.000"><i class="fa-solid fa-cart-shopping"></i>
+              Pesan
+              Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="product-card card border-0 bg-white" data-aos="fade-up" data-aos-delay="250">
+          <img src="images/2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text text-dark fw-bold">OAK AGED Drum Whisky 350ML</p>
+            <p class="card-text text-dark fw-light">Segar,beraroma, hangat, & elegan.</p>
+          </div>
+          <div class="d-md-flex row row-cols-1 row-cols-2 ">
+            <span class=" text-success fw-bold d-block p-2 harga text-start ">170,000,00</span>
+            <a class=" ms-auto btn  text-dark fw-bold d-block btnDetail underline-hover add-to-cart"
+              data-name="OAK AGED Drum Whisky 350ML" data-price="170.000"><i class="fa-solid fa-cart-shopping"></i>
+              Pesan
+              Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="product-card card border-0 bg-white" data-aos="fade-up" data-aos-delay="350">
+          <img src="images/3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text fw-bold text-dark">Vibe Merah 650ML Vodka Original</p>
+            <p class="card-text text-dark fw-light">Segar,beraroma, hangat, & elegan.</p>
+          </div>
+          <div class="d-md-flex row row-cols-1 row-cols-2 ">
+            <span class=" text-success fw-bold d-block p-2 harga text-start ">220,000,00</span>
+            <a class=" ms-auto btn  text-dark fw-bold d-block btnDetail underline-hover add-to-cart"
+              data-name="Vibe Merah 650ML Vodka Original" data-price="220.000"><i class="fa-solid fa-cart-shopping"></i>
+              Pesan
+              Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="product-card card border-0 bg-white" data-aos="fade-up" data-aos-delay="450">
+          <img src="images/4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text fw-bold text-dark">Vodka Original Vibe black 650ML</p>
+            <p class="card-text text-dark fw-light">Segar,beraroma, hangat, & elegan.</p>
+          </div>
+          <div class="d-md-flex row row-cols-1 row-cols-2 ">
+            <span class=" text-success fw-bold d-block p-2 harga text-start ">220,000,00</span>
+            <a class=" ms-auto btn  text-dark fw-bold d-block btnDetail underline-hover add-to-cart"
+              data-name="Vodka Original Vibe black 650ML" data-price="220.000"><i class="fa-solid fa-cart-shopping"></i>
+              Pesan
+              Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="product-card card border-0 bg-white" data-aos="fade-up" data-aos-delay="550">
+          <img src="images/5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text fw-bold text-dark">Kawa Kawa Liquor Avenue 650ML</p>
+            <p class="card-text text-dark fw-light">Segar,beraroma, hangat, & elegan.</p>
+          </div>
+          <div class="d-md-flex row row-cols-1 row-cols-2 ">
+            <span class=" text-success fw-bold d-block p-2 harga text-start ">70,000,00</span>
+            <a class=" ms-auto btn  text-dark fw-bold d-block btnDetail underline-hover add-to-cart"
+              data-name="Kawa Kawa Liquor Avenue 650ML" data-price="70.000"><i class="fa-solid fa-cart-shopping"></i>
+              Pesan
+              Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="product-card card border-0 bg-white" data-aos="fade-up" data-aos-delay="650">
+          <img src="images/6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text fw-bold text-dark">Intisari Isi 3 Mini Bundling 275ML</p>
+            <p class="card-text text-dark fw-light">Segar,beraroma, hangat, & elegan.</p>
+          </div>
+          <div class="d-md-flex row row-cols-1 row-cols-2 ">
+            <span class=" text-success fw-bold d-block p-2 harga text-start ">85,000,00</span>
+            <a class=" ms-auto btn  text-dark fw-bold d-block btnDetail underline-hover add-to-cart"
+              data-name="Intisari Isi 3 Mini Bundling 275ML" data-price="85.000"><i
+                class="fa-solid fa-cart-shopping"></i>
+              Pesan
+              Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tentang -->
+    <!-- <div class="px-4 py-4 bg-dark text-center">
+      <div class="mx-auto w-75">
+        <h3 class="text-white">Tentang Kami</h3>
+        <p class="text-center text-white"><img src="images/about-us.png" alt="" align="left"
+            style="width: 180px; height: auto;" class="me-3 mb-3"> Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Veritatis inventore deleniti cumque tenetur tempora expedita impedit, placeat modi! Vel, qui. ipsum
+          dolor, sit amet consectetur adipisicing
+          elit. Minus repellat velit perspiciatis voluptatibus assumenda labore laudantium, magnam qui blanditiis
+          quidem! ipsum dolor sit, amet consectetur adipisicing
+          elit. Aliquam officiis illo culpa, quidem deserunt sit iure cupiditate. Rerum, nisi impedit. ipsum dolor, sit
+          amet consectetur adipisicing
+          elit. Exercitationem dicta ducimus quibusdam vel! Ipsa libero quaerat totam esse voluptas maxime! ipsum dolor
+          sit amet consectetur adipisicing
+          elit. Nam
+          maiores pariatur sed odit impedit! Eos assumenda adipisci et distinctio dolore.</p>
+      </div>
+    </div> -->
+    <!-- cara order -->
+    <div class="px-4 py-4  ext-center" data-aos="fade-left" data-aos-delay="350">
+      <div class="mx-auto w-75">
+        <h3 class="text-dark">🍾 Cara Order</h3>
+        <ol class="text-start text-dark">
+          <img src="images/order.png" alt="" align="right" style="width: 200px; height: auto;" class="me-3 mb-3">
+          <li>Scroll dulu, pilih minuman yang bikin lidah joget.</li>
+          <li>Begitu nemu yang cocok, langsung klik tombol “Pesan via WhatsApp”</li>
+          <li>Lu bakal langsung dilempar ke WhatsApp kita — gak ribet, gak basa-basi.</li>
+          <li>Tinggal chat: “Bro, kirim yang ini sekarang juga!” atau pakai format pesan otomatis.</li>
+          <li>Kita balas cepet (selama gak ketiduran), dan minuman langsung OTW ke tempat lo.</li>
+        </ol>
+        <ol class="text-start text-dark">
+          <h5>⚠️ Syarat & Ketentuan buat yang ngebir:</h5>
+          <li>Umur harus 21+, bukan bocil yang baru lulus UN.</li>
+          <li>Orderan dilayanin jam 10 pagi sampai 10 malem, sisanya kita ikut mabok juga.</li>
+          <li>Chat sopan ya, kita jual alkohol, bukan jual sabar 😜</li>
+        </ol>
+      </div>
+    </div><br><br><br><br>
+
+    <!-- Mini Cart -->
+    <div class="cart-box fixed-bottom" id="miniCart">
+      <h6><i class="fa-solid fa-cart-shopping"> </i> Keranjang</h6>
+      <ul id="cartItems" class="list-unstyled"></ul>
+      <button class="btn btn-success btn-sm w-100" id="checkoutBtn">Checkout</button>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center text-dark p-4 border-top">&copy; 2025 ChillDulu - Taofik Muhammad Dimas</div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <!-- aos -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
